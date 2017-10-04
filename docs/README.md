@@ -7,6 +7,8 @@ and load services directly into app.component or app.modules.
 
 The goal here is to follow the recommended modular structure and package modules, components, and services that can be reused across multiple applications.
 
+---
+
 ### First things first
 
 We always start by creating a new project. Follow the [Getting Started](https://angular.io/guide/quickstart) instructions from the [Official Angular Documentation](https://angular.io/docs).  
@@ -44,6 +46,7 @@ typescript: 2.3.4
 ```
 
 Once the project is created I like to configure the cli so that any generated files will have a selector prefix other than the default, `app`.  
+
 For this application I will use `hcc` for Humbold Code Club.  Open the `.angular-cli.json` file and update the prefix setting:
 
 ```bash
@@ -66,6 +69,16 @@ The `tslint.json` file is setup to enforce prefixes, so don't forget to add your
   "kebab-case"
 ],
 ``` 
+
+We have not made any changes to the default app itself yet, so go ahead and run it to make sure everything is working before we move on.
+
+```bash
+$ ng serve
+```
+
+---
+
+### Making our first changes
 
 ```markdown
 Syntax highlighted code block
