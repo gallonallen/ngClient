@@ -20,6 +20,15 @@ $ npm -v
 v3.10.8
 ```
 
+Once the project is created I like to configure the cli so that any generated files will have a selector prefix other than the default, `app`.  
+For this application I will use `hcc` for Humbold Code Club.  Open the `.angular-cli.json` file and update the prefix setting:
+
+```json
+  "prefix": "hcc",
+```
+
+Optional:  If you have setup your tslint file to enforce prefixes don't forget to add your new prefix or the linter will fail.   
+
 ```markdown
 Syntax highlighted code block
 
