@@ -18,16 +18,54 @@ $ node -v
 v7.0.0
 $ npm -v
 v3.10.8
+$ ng -v
+    _                      _                 ____ _     ___
+   / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+  / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+ / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+/_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+               |___/
+@angular/cli: 1.4.4
+node: 7.0.0
+os: darwin x64
+@angular/animations: 4.4.4
+@angular/common: 4.4.4
+@angular/compiler: 4.4.4
+@angular/core: 4.4.4
+@angular/forms: 4.4.4
+@angular/http: 4.4.4
+@angular/platform-browser: 4.4.4
+@angular/platform-browser-dynamic: 4.4.4
+@angular/router: 4.4.4
+@angular/cli: 1.4.4
+@angular/compiler-cli: 4.4.4
+@angular/language-service: 4.4.4
+typescript: 2.3.4
 ```
 
 Once the project is created I like to configure the cli so that any generated files will have a selector prefix other than the default, `app`.  
 For this application I will use `hcc` for Humbold Code Club.  Open the `.angular-cli.json` file and update the prefix setting:
 
-```json
-  "prefix": "hcc",
+```bash
+"prefix": "hcc",
 ```
 
-Optional:  If you have setup your tslint file to enforce prefixes don't forget to add your new prefix or the linter will fail.   
+The `tslint.json` file is setup to enforce prefixes, so don't forget to add your new selector prefix or the linter will fail. 
+
+```bash
+"directive-selector": [
+  true,
+  "attribute",
+  "app, hcc",
+  "camelCase"
+],
+"component-selector": [
+  true,
+  "element",
+  "app, hcc",
+  "kebab-case"
+],
+``` 
 
 ```markdown
 Syntax highlighted code block
