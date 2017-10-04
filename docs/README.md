@@ -83,12 +83,22 @@ Finally, I have made some changes to the default home page by changing the `titl
 ### Making a new module
 Our goal is to make a module with components and services that we can plug into our app.  We will be consuming an api that serves information about bitcoin, so from the project root directory run:
 
+#### create the module
 ```bash
 $ ng g module bitccoin
 ```
 This will create a new directory and module under the app directory, `src/app/bitcoin/bitcoin.module.ts`.
 
-To add a component to this module run the following command
+#### create the component
+To add a component to this module run the following command from the bitcoin directory:
+```bash
+$ ng g component bitcoin-price -m bitcoin
+```
+This will generate a new directory containing a component, template, css file, and spec under the bitcoin directory and add the component to our module.
+
+#### update the component template
+
+
 
 ```markdown
 Syntax highlighted code block
