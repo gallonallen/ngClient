@@ -76,9 +76,19 @@ We have not made any changes to the default app itself yet, so go ahead and run 
 $ ng serve
 ```
 
+Finally, I have made some changes to the default home page by changing the `title` in `app.component.ts` and adding a link to this project page in the template, `app.component.html`.
+
 ---
 
-### Making our first changes
+### Making a new module
+Our goal is to make a module with components and services that we can plug into our app.  We will be consuming an api that serves information about bitcoin, so from the project root directory run:
+
+```bash
+$ ng g module bitccoin
+```
+This will create a new directory and module under the app directory, `src/app/bitcoin/bitcoin.module.ts`.
+
+To add a component to this module run the following command
 
 ```markdown
 Syntax highlighted code block
