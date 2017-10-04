@@ -1,8 +1,11 @@
-## Welcome to GitHub Pages
+## ngClient 
 
-You can use the [editor on GitHub](https://github.com/gallonallen/test/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+ngClient is a demo application for reference when creating Angular applications that must consume web services.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+It seems that most examples on the web follow the beginning http tutorial 
+and load services directly into app.component or app.modules.  
+
+The goal here is to follow the recommended modular structure and package modules, components, and services that can be reused across multiple applications.
 
 ### Markdown
 
