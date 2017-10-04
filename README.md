@@ -1,6 +1,6 @@
 # NgClient
 
-Visit the [Project Page] (https://gallonallen.github.io/ngClient/)  
+Visit the [Project Page](https://gallonallen.github.io/ngClient/)  
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.0.
 

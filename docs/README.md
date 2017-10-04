@@ -7,9 +7,18 @@ and load services directly into app.component or app.modules.
 
 The goal here is to follow the recommended modular structure and package modules, components, and services that can be reused across multiple applications.
 
-### Markdown
+### First things first
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+We always start by creating a new project. Follow the [Getting Started](https://angular.io/guide/quickstart) instructions from the [Official Angular Documentation](https://angular.io/docs).  
+
+At the time of this writing Angular is stable at `v4.4.4` and my system is configured with the following node and npm versions:  
+
+```bash
+$ node -v
+v7.0.0
+$ npm -v
+v3.10.8
+```
 
 ```markdown
 Syntax highlighted code block
