@@ -94,36 +94,47 @@ To add a component to this module run the following command from the bitcoin dir
 ```bash
 $ ng g component bitcoin-price -m bitcoin
 ```
-This will generate a new directory containing a component, template, css file, and spec under the bitcoin directory and add the component to our module.
+This will generate a new directory containing a component, template, css file, and spec under the bitcoin directory and import the component in the bitcoin module and add it to the declarations.  
 
-#### update the component template
+It also needs to be added to the module exports so it can be displayed in our home page:
 
-
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```ts
+exports: [BitcoinPriceComponent]
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+#### import into the app module
+Importing the `bitcoin.module` into `app.module.ts` should look something like this:
 
-### Jekyll Themes
+```ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/gallonallen/test/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+import { AppComponent } from './app.component';
 
-### Support or Contact
+// Feature Modules
+import { BitcoinModule } from './bitcoin/bitcoin.module';
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    BitcoinModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+```
+
+Add the bitcoin-price component to the template `app.component.html` using its selector:
+
+```html
+<div>
+  <hcc-bitcoin-price></hcc-bitcoin-price>
+</div>
+```
+
+Check in your browser and you should see your bitcoin-price template displayed at the bottom of the webpage: `bitcoin-price works!`

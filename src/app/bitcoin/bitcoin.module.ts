@@ -3,9 +3,8 @@ import { CommonModule } from '@angular/common';
 import { BitcoinPriceComponent } from './bitcoin-price/bitcoin-price.component';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: [BitcoinPriceComponent]
+  imports: [CommonModule],
+  declarations: [BitcoinPriceComponent],
+  exports: [BitcoinPriceComponent]
 })
 export class BitcoinModule { }
